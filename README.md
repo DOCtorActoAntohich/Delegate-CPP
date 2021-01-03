@@ -2,10 +2,13 @@
 
 Delegates from C# are now in C++!!
 
-I did that mostly for fun, but I enjoyed template magic, and that it works. Still, I have things to finish.
+This little project was made mostly for fun and aducational purposes.
 
-Check examples to see the usage.
+Check examples to see the usage. For now it allows to use:
 
-
-
-To-do: add member-functions support.
+* Global functions
+* Static functions
+* Lambdas
+* Functors
+* The result of `std::bind`
+* Member functions ~~(lame)~~

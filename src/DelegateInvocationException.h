@@ -1,6 +1,6 @@
 /*****************************************************************//**
  * \file   DelegateInvocationException.h
- * \brief  Contains definition of exception for Delegates.
+ * \brief  The definition of exception for Delegates.
  * 
  * \author DOCtorActoAntohich
  * \date   December 2020
