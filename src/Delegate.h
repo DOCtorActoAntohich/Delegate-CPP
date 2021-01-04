@@ -13,6 +13,9 @@
 #include <functional>
 
 #include "DelegateInvocationException.h"
+#include "IsCallable.h"
+
+
 
 // Undefined.
 template<class _Func> class Delegate;
@@ -103,9 +106,13 @@ public:
 	/// </summary>
 	/// <typeparam name="_callable">Any callable object.</typeparam>
 	/// <param name="fn">Any callable object.</param>
-	template<class _callable>
-	Delegate(_callable fn) : Delegate() {
-		m_invokationList.push_back(fn);
+	template<class _Ty>
+	Delegate(_Ty fn) : Delegate() {
+		static_assert(is_callable_v<_Ty>, "A given object is not callable");
+
+		if constexpr (is_callable_v<_Ty>) {
+			m_invokationList.push_back(fn);
+		}
 	}
 
 	~Delegate() = default;
